@@ -1,0 +1,118 @@
+.\" Man page for manpath
+.\"
+.\" Copyright (C), 1995, Graeme W. Wilford. (Wilf.)
+.\"
+.\" You may distribute under the terms of the GNU General Public
+.\" License as specified in the COPYING file that comes with the
+.\" man-db distribution.  
+.\"
+.\" Sun Jan 22 22:15:17 GMT 1995 Wilf. (G.Wilford@ee.surrey.ac.uk)
+.\"
+.TH MANPATH 1 "2015-11-06" "2.7.5" "Útiles de Páginas de Manual"
+.SH NAME
+manpath \- determinar la ruta para las páginas de manual
+.SH SINOPSIS
+.B manpath  
+.RB [\| \-qgdc \|] 
+.RB [\| \-m
+.IR sistema \|[\|,.\|.\|.\|]\|]
+.SH DESCRIPCIÓN
+Si 
+.RB $ MANPATH
+está activa,
+.B manpath
+simplemente presenta su contenido y un mensaje de advertencia.
+En caso contrario,
+.B manpath 
+determina una ruta adecuada de jerarquías de páginas de manual y presenta
+los resultados.
+
+La ruta, delimitada por "dos puntos", se determina en base a la información
+contenida en el fichero de configuración de 
+man-db - 
+.RI ( "/etc/man_db.conf" )
+y el entorno del usuario.
+.SH OPCIONES
+.TP
+.B \-q, \-\-quiet
+No imprime advertencias.
+.TP
+.B \-d, \-\-debug
+Genera información de depurado.
+.TP
+.B \-c, \-\-catpath
+Determina la ruta de cat en vez de la de manual. Una vez que la ruta de
+manual ha sido determinada, cada elemento de la ruta es convertido a su
+ruta cat relativa.
+.TP
+.B \-g, \-\-global
+Determina la ruta de manual formada por todas las rutas que han sido
+marcadas como `global' en el fichero de configuración de man-db.
+.\"
+.\" Due to the rather silly limit of 6 args per request in some `native'
+.\" *roff compilers, we have do the following to get the two-line
+.\" hanging tag on one line. .PP to begin a new paragraph, then the
+.\" tag, then .RS (start relative indent), the text, finally .RE
+.\" (end relative indent).
+.\"
+.PP
+.B \-m 
+.I sistema\c 
+.RB \|[\|,.\|.\|.\|]\| ,
+.BI \-\-systems= sistema\c 
+\|[\|,.\|.\|.\|]
+.RS
+Si este sistema tiene acceso a las jerarquías de páginas de manual de otro 
+sistema operativo, se puede usar esta opción para incluirlas en la salida de
+.BR manpath .
+
+Para incluir las jerarquías de páginas de manual de NuevoSO,
+use la opción
+.B \-m
+.BR NuevoSO .
+
+El 
+.I sistema
+especificado puede en realidad ser una combinación de nombres de
+sistemas operativos separados por "comas". 
+
+Para incluir en la búsqueda las jerarquías de páginas del sistema
+operativo nativo, debe incluir el nombre de sistema
+.B man
+en la cadena de argumentos.
+El valor dado en esta opción es utlizado por el sistema en lugar 
+de la variable del entorno
+.RB $ SYSTEM .
+.RE
+.TP
+.B \-h, \-\-help
+Imprime un mensaje de ayuda y termina.
+.TP
+.B \-V, \-\-version
+Presenta la información sobre el autor y la versión.
+.SH ENTORNO
+.TP
+.B MANPATH
+Si la variable
+.RB $ MANPATH
+está activa, 
+.B manpath
+imprime su contenido en vez de determinar la ruta sobre la marcha.
+.TP
+.B SYSTEM
+Si la variable
+.RB $ SYSTEM
+está activa, tendrá el mismo efecto que si su contenido hubiese sido usado
+como argumento de la opción
+.B \-m .
+.SH FICHEROS
+.TP \w'/etc/man_db.conf'u+2n
+.I /etc/man_db.conf
+Fichero de configuración del sistema.
+.SH "VÉASE TAMBIÉN"
+.BR apropos (1),
+.BR whatis (1),
+.BR man (1).
+.SH AUTOR
+Wilf. (G.Wilford@ee.surrey.ac.uk)
+Traducción realizada por Luis F. González (luisgh@cogs.susx.ac.uk)

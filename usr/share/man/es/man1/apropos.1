@@ -1,0 +1,178 @@
+.\" Man page for apropos
+.\"
+.\" Copyright (C), 1994, 1995, Graeme W. Wilford. (Wilf.)
+.\"
+.\" You may distribute under the terms of the GNU General Public
+.\" License as specified in the file COPYING that comes with the 
+.\" man-db distribution.
+.\"
+.\" Sat Oct 29 13:09:31 GMT 1994  Wilf. (G.Wilford@ee.surrey.ac.uk) 
+.\" 
+.TH APROPOS 1 "2015-11-06" "2.7.5" "Útiles de Páginas de Manual"
+.SH NOMBRE
+apropos \- buscar entre las páginas del manual y las descripciones
+.SH SINOPSIS
+.B apropos 
+.RB [\| \-dhV  \|] 
+.RB [\| \-e \||\| \-w \||\| \-r\c
+\|]
+.RB [\| \-m
+.IR sistema \|[\|,.\|.\|.\|]\|]
+.RB [ \-M
+.IR ruta \|]
+.I palabra_clave
+\&.\|.\|.
+.SH DESCRIPCIÓN
+Cada página de manual contiene una pequeña descripción.
+.B apropos
+busca dentro de esas descripciones la presencia de la 
+.IR palabra_clave .
+
+La
+.I palabra_clave
+es normalmente una expresión regular, como si se hubiese usado
+.RB ( \-r )
+, puede contener caracteres comodín
+.RB ( \-w )
+, o ser la palabra clave exacta
+.RB ( \-e )
+\ . Cuando se usan estas opciones, puede ser necesario entrecomillar la 
+.I palabra_clave
+o anteponer (\\) a los caracteres especiales para evitar que la shell los
+interprete.
+
+Las reglas estándar permiten buscar en nombres de página y en las
+palabras completas de la descripción de cada página.
+.SH OPCIONES
+.TP
+.B \-d, \-\-debug
+Imprime información de depuración.
+.TP
+.B \-r, \-\-regex
+Interpreta cada palabra clave como una expresión regular. Este comportamiento
+es el predeterminado. Cada palabra clave se comparará con los nombres de
+las páginas y con las descripciones de forma independiente. La comparación
+puede tener éxito con cualquier parte de ellas. La comparación no tiene
+por qué comprender palabras completas, sino también partes de ellas.
+.TP
+.B \-w, \-\-wildcard
+Interpreta cada palabra clave como un patrón que incluye caracteres comodín
+del estilo de la shell. Cada palabra clave se comparará con los nombres de
+las páginas y con las descripciones de forma independiente. La comparación
+sólo tendrá éxito si la palabra clave una vez expandida corresponde con
+una descripción completa o un nombre de página.
+.TP
+.B \-e, \-\-exact
+Cada palabra clave se comparará de forma exacta con los nombres de páginas
+y las descripciones.
+.\"
+.\" Due to the rather silly limit of 6 args per request in some `native'
+.\" *roff compilers, we have do the following to get the two-line
+.\" hanging tag on one line. .PP to begin a new paragraph, then the
+.\" tag, then .RS (start relative indent), the text, finally .RE
+.\" (end relative indent).
+.\"
+.PP
+.B \-m 
+.I sistema\c 
+.RB \|[\|,.\|.\|.\|]\| ,
+.BI \-\-systems= sistema\c 
+\|[\|,.\|.\|.\|]
+.RS
+Si este sistema puede acceder a las páginas de manual de otro sistema
+operativo, se puede activar su búsqueda mediante esta opción.
+Para buscar en las páginas de NuevoSO, use la opción 
+.B \-m
+.BR NuevoSO .
+
+El
+.I sistema
+especificado puede ser en realidad una lista separada por comas, de
+nombres de sistemas operativos.
+Para incluir la base de datos de descripciones
+.B whatis
+del sistema operativo nativo en la búsqueda basta incluir
+.B man 
+como nombre de sistema en la lista de argumentos.
+Esta opción hace que se ignore el contenido de la variable de entorno
+.RB $ SYSTEM.
+.RE
+.TP
+.BI \-M\  ruta ,\ \-\-manpath= ruta
+Especifica un conjunto de jerarquías de páginas de manual
+separados por "dos puntos".
+Por defecto,
+.B apropos
+utiliza la variable de entorno
+.RB $ MANPATH
+a menos que esté vacía o no exista, en cuyo caso determinará
+la ruta para las páginas de manual apropiadas basándose en su
+variable de entorno
+.RB $ PATH .
+Esta opción hace que se ignore el contenido de la variable de entorno
+.RB $ MANPATH .
+.TP
+.B \-h, \-\-help
+Imprime un mensaje de ayuda y termina.
+.TP
+.B \-V, \-\-version
+Presenta la información sobre la version y el autor.
+.SH "ESTADO DE SALIDA"
+.TP
+.B 0
+Ejecución terminada con éxito.
+.TP
+.B 1
+Error de uso, sintaxis o de fichero de configuración.
+.TP
+.B 2
+Error operacional.
+.TP
+.B 16
+No se ha encontrado nada que cuadre con los criterios especificados.
+.SH ENTORNO
+.TP
+.B SYSTEM
+Si existe
+.RB $ SYSTEM ,
+tendrá el mismo efecto que si se especifica su contenido como el argumento
+de la opción 
+.B \-m \ .
+.TP
+.B MANPATH
+Si existe
+.RB $ MANPATH ,
+su valor es interpretado como la ruta al conjunto de jerarquías de
+páginas a usar separadas por "dos puntos".
+.TP
+.B POSIXLY_CORRECT
+Si 
+.RB $ POSIXLY_CORRECT
+existe, incluso si su valor es nulo, 
+.B apropos 
+realizará por defecto una búsqueda como expresión regular
+.RB ( \-r ).
+De todas formas, este es el comportamiento predeterminado actualmente.
+.SH FICHEROS
+.TP
+.I /usr/share/man/index.(bt|db|dir|pag)
+.I Índice
+tradicional del caché de la base de datos global.
+.TP
+.I /var/cache/man/index.(bt|db|dir|pag)
+.I Índice
+alternativo o de acuerdo con el FHS del caché de la base de datos global.
+.TP
+.I /usr/share/man/\|.\|.\|.\|/whatis
+Base de datos tradicional de tipo texto de
+.B whatis .
+.SH "VÉASE TAMBIÉN"
+.BR whatis (1),
+.BR man (1).
+.SH AUTOR
+.nf
+Wilf. (G.Wilford@ee.surrey.ac.uk)
+Fabrizio Polacco (fpolacco@debian.org).
+Traducción realizada por Luis F. González (luisgh@cogs.susx.ac.uk), y
+revisada por David Martínez (ender@adi.uam.es).
+.fi

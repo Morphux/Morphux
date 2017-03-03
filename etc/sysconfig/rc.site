@@ -1,0 +1,9 @@
+# rc.site
+# Optionnal parameters for boot scritps
+
+# Settings
+DISTRO="Morphux"
+DISTRO_SITE="https://morphux.org"
+
+# Boot
+welcome_message="Welcome to ${DISTRO} ! If you any have problems / questions, please go to ${DISTRO_SITE}"

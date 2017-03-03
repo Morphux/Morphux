@@ -1,0 +1,154 @@
+'\" t
+.\" Man page for mandb
+.\"
+.\" Copyright (C), 1994, 1995, Graeme W. Wilford. (Wilf.)
+.\"
+.\" You may distribute under the terms of the GNU General Public
+.\" License as specified in the file COPYING that comes with the
+.\" man-db distribution.
+.\" 
+.\" Tue Apr 26 12:56:44 BST 1994  Wilf. (G.Wilford@ee.surrey.ac.uk) 
+.\"
+.TH MANDB 8 "2015-11-06" "2.7.5" "útiles para las Páginas del Manual"
+.SH NOMBRE
+mandb \- crea o actualiza los índices temporales de páginas del manual
+.SH SINOPSIS
+.B mandb  
+.RB [\| \-dqsuc \||\| \-h \||\| \-V\c
+.RI "\|] [\|" ruta al manual \|] 
+.SH DESCRIPCIÓN
+.B mandb
+se usa para crear o actualizar manualmente la base de datos temporal de
+.B índices
+que usualmente mantiene la utilidad
+.BR man .
+Estos índices temporales contienen información sobre el estado actual
+del sistema de páginas del manual, y la infomación contenida en ellos
+se usa por las utilidades man-db para mejorar su velocidad y funcionalidad.
+
+Cuando se crea o actualiza un
+.BR índice,
+.B mandb
+le avisará de peticiones ROFF .so incorrectas, nombres falsos de páginas
+de manual y páginas cuyos 
+.B whatis
+(descripciones cortas) no pudieron analizarse.
+
+Si se le suministra a
+.B mandb 
+una ruta opcional, delimitada con dos puntos (:), no usará la ruta
+de búsqueda `global' interna para la jerarquía depáginas del manual,
+que se determina a partir de la información que se encuentra
+en el fichero de configuración de man-db.
+.SH "BASES DE DATOS TEMPORALES"
+.B mandb
+puede compilarse con soporte para cualquiera de los siguientes tipos
+de bases de datos.
+
+.TS
+tab (@);
+l l l l.
+Nombre@Tipo@Asinc@Nombre de fichero
+_
+Berkeley db@Árbol binario@Sí@\fIindex.bt\fR
+GNU gdbm v >= 1.6@"Hashed"@Sí@\fIindex.db\fR
+GNU gdbm v <  1.6@"Hashed"@No@\fIindex.db\fR
+UNIX ndbm@"Hashed"@No@\fIindex.(dir|pag)\fR
+.TE
+
+Los tipos de base de datos que soportan actualizaciones asíncronas
+permiten mayor velocidad, a costa de posible corrupción en caso de
+una interrupción inusual.
+En el caso inusual de que esto ocurra, puede ser necesario volver a
+ejecutar
+.B mandb 
+con la opción
+.B \-c
+para volver a crear las bases de datos desde cero.
+.SH OPTCIONES
+.TP
+.B \-d, \-\-debug
+Muestra información de depurado.
+.TP
+.B \-q, \-\-quiet
+No muestra ningún aviso.
+.TP
+.B \-s, \-\-no-straycats
+No dedica tiempo a buscar o añadir información a las bases de datos
+sobre páginas "cat" sin su correspondiente página fuente.
+.TP
+.B \-c, \-\-create
+Por defecto,
+.B mandb
+intentará actualizar cualquier base de datos creada previamente.
+Si una base de datos no existe, la creará. Esta opción fuerza a
+.B mandb
+a que borre las bases de datos previas, y las cree de nuevo desde cero.
+Esto puede ser necesario si la base de datos se corrompe o si un nuevo
+esquema de almacenamiento de base de datos se introduce en el futuro.
+.TP
+.B \-u, \-\-user-db
+Crea bases de datos del usuario únicamente, incluso si tiene los permisos
+de escritura necesarios para crear bases de datos `globales'.
+.TP
+.B \-h, \-\-help
+Muestra el mensaje de uso, y termina.
+.TP
+.B \-V, \-\-version
+Muestra la versión, y termina.
+.SH DIAGNÓSTICOS
+Los siguientes mensajes de aviso pueden omitirse durante la construcción
+de las bases de datos.
+.TP 
+.B <filename>: whatis parse for page(sec) failed
+(<fichero>: El análisis del "whatis" para la página(sección) falló).
+El intento de extraer la línea o líneas de descripción breve del
+<fichero> dado falló. Esto se debe usualmente a que la página de manual
+está pobremente escrita, pero si se emiten muchos mensajes como este, es 
+probable que el sistema contenga páginas de manual no estandar que sean
+incompatibles con el analizador de whatis de man-db.
+.TP
+.B <filename>: is a dangling symlink
+(<fichero>: es un enlace perdido)
+<fichero> no existe, pero un enlace simbólico hace referencia a él.
+Usualmente se emiten más diagnósticos para identificar el nombre de
+fichero del enlace problemático.
+.TP
+.B <filename>: bad symlink or ROFF `.so' request
+(<fichero>: enlace simbólico o petición ROFF `.so' incorrectos)
+<fichero> es o bien un enlace simbólico a, o contiene una petición
+ROFF para incluir, un fichero no existente.
+.TP
+.B <filename>: ignoring bogus filename
+(<fichero>: ignorando nombre falso)
+El <fichero> puede o no ser una página de manual válida, pero su nombre
+no es válido. Esto se debe usualmente a páginas de manual con la extensión
+de sección <x> que se han puesto en la sección <y>.
+.TP
+.B <filename_mask>: competing extensions
+(<máscara_de_nombre_de_fichero>: extensiones que compiten)
+La "wildcard" <máscara_de_nombre_de_fichero> no es única. Esto está
+causado usualmente por la existencia de ambas versiones, comprimida
+y no comprimida, de la misma página del manual. Se usará sólo la más 
+reciente.
+.SH FICHEROS
+.TP
+.I /etc/man_db.conf
+fichero de configuración de man-db.
+.TP
+.I /usr/man/index.(bt|db|dir|pag)
+Una base de datos temporal de
+.I índices
+tradicional.
+.TP
+.I /var/catman/index.(bt|db|dir|pag)
+Una base de datos temporal de
+.I índices
+alternativa o conforme al FSSTND.
+.SH "VÉASE TAMBIÉN"
+.BR man (1), 
+.BR manpath (5),
+.BR catman (8).
+.SH AUTOR
+Wilf. (G.Wilford@ee.surrey.ac.uk)
+Traducción realizada por Enrique Zanardi (ezanardi@ull.es)

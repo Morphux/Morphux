@@ -1,0 +1,99 @@
+.\" Man page for catman
+.\"
+.\" Copyright (C), 1994, 1995, Graeme W. Wilford. (Wilf.)
+.\"
+.\" You may distribute under the terms of the GNU General Public
+.\" License as specified in the file COPYING that comes with the
+.\" man-db distribution.
+.\"
+.\" Sat Dec 10 14:17:29 GMT 1994  Wilf. (G.Wilford@ee.surrey.ac.uk) 
+.\" 
+.TH CATMAN 8 "2015-11-06" "2.7.5" "Útiles para las Páginas del Manual"
+.SH NOMBRE
+catman \- crea o actualiza las páginas del manual preformateadas
+.SH SINOPSIS
+.B catman 
+.RB [\| \-dhV \|] 
+.RB [\| \-M 
+.IR ruta \|] 
+.RI [\| sección \|]
+\&.\|.\|.
+.SH DESCRIPCIÓN
+.B catman
+se usa para crear un conjunto actualizado de páginas de manual prefromateadas,
+conocido como páginas cat.
+Las páginas cat se muestran generalmente mucho más rápido que las páginas
+del manual originales. La decisión de admitir páginas cat es del administrador
+local, que debe suministrar directorios apropiados para contenerlas.
+
+Las opciones disponibles para
+.B catman
+son las jerarquías y secciones de páginas del manual a preformatear. Las
+jerarquías por omisión son las especificadas como `globales' en el fichero
+de configuración de man-db y las secciones por omisión son, o bien
+los contenidos de la variable de entorno
+.RB $ MANSECT
+delimitados por dos puntos (:), o el conjunto estandar compilado dentro de 
+.B man
+si 
+.RB $ MANSECT
+no está definido. Si se le suministra a 
+.B catman
+un conjunto de nombres de sección separados por espacios, tendrá precedencia
+sobre los dos anteriores.
+
+.B catman
+hace uso de la base de datos temporal de
+.B índice
+asociada con cada jerarquía para determinar qué ficheros tienen que ser
+formateados.
+.SH OPCIONES
+.TP
+.B \-d, \-\-debug
+Muestra información de depurado.
+.TP
+.BI \-M\  ruta ,\ \-\-manpath= ruta
+Especifica una ruta de búsqueda alternativa para la jerarquía de páginas
+del manual, delimitado por dos puntos (:). Por omisión ésta consiste en
+todas las
+rutas indicados como `globales' en el fichero de configuración de man-db.
+.TP
+.B \-h, \-\-help
+Muestra un mensaje de ayuda y termina.
+.TP
+.B \-V, \-\-version
+Muestra información sobre la versión y el autor.
+.SH ENTORNO
+.TP
+.B MANSECT
+SI
+.RB $ MANSECT
+está definida, su valor es una lista de secciones delimitadas por dos puntos
+(:) y se usa para determinar qué secciones del manual buscar y en qué orden.
+.TP
+.B MANPATH
+Si
+.RB $ MANPATH
+está definida, su valor se interpreta como la ruta de búsqueda a usar 
+para la jerarquía de páginas del manual, delimitado por dos puntos (:).
+.SH FICHEROS
+.TP
+.I /etc/man_db.conf
+fichero de configuración de man-db.
+.TP
+.I /usr/man/index.(bt|db|dir|pag)
+Una base de datos temporal de 
+.I índice
+tradicional.
+.TP
+.I /var/catman/index.(bt|db|dir|pag)
+Una base de datos temporal de
+.I índice
+alternativa o acorde con el FSSTND.
+.SH "VÉASE TAMBIÉN"
+.BR man (1),
+.BR manpath (5), 
+.BR mandb (8).
+.SH AUTOR
+Wilf. (G.Wilford@ee.surrey.ac.uk).
+Traducción realizada por Enrique Zanardi (ezanardi@ull.es)

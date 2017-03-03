@@ -1,0 +1,75 @@
+.\" Man page for zsoelim
+.\"
+.\" Copyright (C), 1994, 1995, Graeme W. Wilford. (Wilf.)
+.\"
+.\" You may distribute under the terms of the GNU General Public
+.\" License as specified in the file COPYING that comes with the
+.\" man-db distribution.
+.\"
+.\" Sat Dec 10 19:33:32 GMT 1994  Wilf. (G.Wilford@ee.surrey.ac.uk) 
+.\" 
+.TH ZSOELIM 1 "2015-11-06" "2.7.5" "Útiles para las Páginas del Manual"
+.SH NOMBRE
+zsoelim \- satisface peticiones .so en la entrada suministrada a roff
+.SH SINOPSIS
+.B zsoelim 
+.RB [\| \-CVh \|]
+.RI [\| fichero
+\&.\|.\|.\|]
+.SH DESCRIPCIÓN
+.B zsoelim 
+analiza los
+.I ficheros
+indicados como argumentos, o si no se ha especificado ninguno, su entrada 
+estandar, buscando líneas de la forma:
+
+.B .so  
+.RI <\| nombre_de_fichero \|>
+
+Estas peticiones se sustituyen por los contenidos del
+.I fichero
+especificado. Si la petición no se puede cumplir,
+.B zsoelim
+buscará el fichero 
+.I nombre_de_fichero.ext
+donde
+.I .ext
+puede ser
+.BR .gz ,
+.BR .Z
+o
+.BR .z .
+Otros tipos de extensiones pueden estar soportadas dependiendo de las opciones
+especificadas a la hora de compilar el programa.
+Si la petición puede cumplirse con un fichero comprimido, este fichero se
+descomprime usando un descompresor apropiado, y su salida se usa para
+satisfacer la petición.
+
+Tradicionalmente, los programas
+.B soelim 
+se usaban para permitir que los preprocesadores roff preprocesasen los 
+ficheros a los que hacían referencia las peticiones. Esta versión en
+particular fue escrita para evitar los problemas creados a la hora
+de soportar páginas del manual comprimidas. 
+.SH OPCIONES
+.TP
+.B \-C
+Esta opción está disponible por compatibilidad con otros programas
+.B soelim.
+Se usa para permitir peticiones .so seguidas de algo distinto de un
+espacio en blanco. Como éste es el comportamiento original, esta opción
+no se tiene en cuenta.
+.TP
+.B \-h
+Muestra un mensaje de ayuda y termina.
+.TP
+.B \-V
+Muestra información sobre el autor y la versión.
+.SH "VÉASE TAMBIÉN"
+.BR nroff (1),
+.BR troff (1),
+.BR groff (1),
+.BR man (1).
+.SH AUTOR
+Wilf. (G.Wilford@ee.surrey.ac.uk).
+Traducción realizada por Enrique Zanardi (ezanardi@ull.es)

@@ -1,0 +1,195 @@
+.\" Man page for whatis
+.\"
+.\" Copyright (C), 1994, 1995, Graeme W. Wilford. (Wilf.)
+.\"
+.\" You may distribute under the terms of the GNU General Public
+.\" License as specified in the file COPYING that comes with the
+.\" man-db distribution.
+.\"
+.\" Sat Oct 29 13:09:31 GMT 1994  Wilf. (G.Wilford@ee.surrey.ac.uk) 
+.\" 
+.TH WHATIS 1 "2015-11-06" "2.7.5" "Útiles de Páginas de Manual"
+.SH NOMBRE
+whatis \- imprime descripciones de páginas de manual
+.SH SINOPSIS
+.B whatis 
+.RB [\| \-dhV \|] 
+.RB [\| \-r \||\| \-w\c 
+\|] 
+.RB [\| \-m
+.IR sistema \|[\|,.\|.\|.\|]\|]
+.RB [\| \-M 
+.IR ruta \|] 
+.I nombre 
+\&.\|.\|.
+.SH DESCRIPCIÓN
+Cada página de manual contiene una pequeña descripción.
+.B whatis
+realiza una búsqueda entre los nombres de las páginas de manual,
+mostrando aquellos que se asemejen al 
+.I nombre
+dado.
+
+.I nombre
+puede contener caracteres comodín
+.RB ( \-w )
+o puede tratarse de una expresión regular
+.RB ( \-r ).
+Si se usa una de estas opciones, 
+puede resultar necesario entrecomillar el
+.I nombre
+o anteponer `\\' a dichos caracteres para evitar que el intérprete de 
+órdenes los sustituya.
+
+Las bases de datos
+.B índices
+son usadas durante la búsqueda.
+Para generar una base de datos 
+.B whatis 
+antigua tipo texto de la base 
+.B index 
+índice, basta usar la orden:
+
+.B whatis \-M 
+.I ruta_de_manual
+.B \-w  '*' | sort > 
+.I ruta_de_manual/whatis
+
+donde 
+.I ruta_de_manual
+es una jerarquía de páginas de manual como, por ejemplo,
+.IR /usr/man .
+.SH OPCIONES
+.TP
+.B \-d, \-\-debug
+Imprime información de depurado.
+.TP
+.B \-r, \-\-regex
+Interpreta cada
+.I nombre
+como una expresión regular.
+Si un 
+.I nombre
+se asemeja a cualquier parte del nombre de una página, se interpretará como
+una identificación positiva.
+Esta opción hace que
+.B whatis 
+funcione algo más lento dada la naturaleza de las búsquedas en
+bases de datos.
+.TP
+.B \-w, \-\-wildcard
+Interpreta cada
+.I nombre
+como un patrón que contiene caracteres comodín al estílo del
+intérprete de órdenes.
+Para que se produzca una identificación positiva, el
+.I nombre 
+expandido debe corresponder al nombre de la página completo.
+Esta opción hace que
+.B whatis
+funcione algo más lento dada la naturaleza de las búsquedas en bases de datos.
+
+.\"
+.\" Due to the rather silly limit of 6 args per request in some `native'
+.\" *roff compilers, we have do the following to get the two-line
+.\" hanging tag on one line. .PP to begin a new paragraph, then the
+.\" tag, then .RS (start relative indent), the text, finally .RE
+.\" (end relative indent).
+.\"
+.PP
+.B \-m 
+.I sistema\c 
+.RB \|[\|,.\|.\|.\|]\| ,
+.BI \-\-systems= sistema\c 
+\|[\|,.\|.\|.\|]
+.RS
+Si este sistema tiene acceso a los nombres de páginas del manual de otro 
+sistema operativo, se puede acceder a ellos mediante esta opción.
+Para buscar entre las páginas de NuevoSO,
+use la opción
+.B \-m
+.BR NuevoSO .
+
+El 
+.I sistema
+especificado puede en realidad ser una combinación de nombres de
+sistemas operativos separados por "comas". 
+
+Para incluir en la búsqueda las páginas del sistema operativo nativo,
+incluya el nombre de sistema
+.B man
+en la cadena de argumentos.
+El valor dado en esta opción es utlizado por el sistema en lugar 
+de la variable del entorno
+.RB $ SYSTEM .
+.RE
+.TP
+.BI \-M\  ruta ,\ \-\-manpath= ruta
+Especifica un conjunto de jerarquías de páginas de manual delimitado
+por "dos puntos" en el que se realizará la búsqueda.
+Por defecto, 
+.B apropos
+usa la variable de entorno
+.RB $ MANPATH
+a menos que ésta esté vacía o desactivada, en cuyo caso se determinará la
+ruta de manual apropiada en base al contenido de la variable de entorno
+.RB $ PATH .
+El valor dado en esta opción es utlizado por el sistema en lugar 
+de la variable del entorno
+.RB $ MANPATH .
+.TP
+.B \-h, \-\-help
+Imprime un mensaje de ayuda y termina.
+.TP
+.B \-V, \-\-version
+Presenta la información sobre el autor y la versión.
+.SH "ESTADO DE SALIDA"
+.TP
+.B 0
+La ejecución del programa ha terminado con éxito.
+.TP
+.B 1
+Error de uso, sintaxis o del fichero de configuración.
+.TP
+.B 2
+Error operacional.
+.TP
+.B 16
+No se han encontrado páginas de manual que se asemejen a los
+criterios especificados.
+.SH ENTORNO
+.TP
+.B SYSTEM
+Si la variable
+.RB $ SYSTEM
+está activa, tendrá el mismo efecto que si su contenido hubiese sido usado
+como argumento con la opción
+.B \-m .
+.TP
+.B MANPATH
+Si la variable
+.RB $ MANPATH
+está activa, su valor se interpreta como la lista de sucesivas 
+jerarquías de páginas de manual separadas por "dos puntos",
+que se usará en la búsqueda.
+.SH FICHEROS
+.TP
+.I /usr/man/index.(bt|db|dir|pag)
+.I Índice
+tradicional global del caché de la base de datos.
+.TP
+.I /var/catman/index.(bt|db|dir|pag)
+.I Índice 
+global alternativo o de acuerdo al FSSTND del caché de la base de datos.
+
+.TP
+.I /usr/man/\|.\|.\|.\|/whatis
+Base de datos
+.B whatis
+tradicional tipo texto.
+.SH "VÉASE TAMBIÉN"
+.BR apropos (1),
+.BR man (1).
+.SH AUTOR
+Wilf. (G.Wilford@ee.surrey.ac.uk)
+Traducción realizada por Luis F. González (luisgh@cogs.susx.ac.uk)

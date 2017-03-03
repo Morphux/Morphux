@@ -1,0 +1,20 @@
+Jan 17 16:59:04 -05:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Jan 17 16:59:08 -05:00 (none)  Bringing up the loopback interface... OK
+Jan 17 16:59:09 -05:00 (none)  Setting hostname to morphux... OK
+Jan 17 16:59:10 -05:00 morphux  Populating /dev with device nodes...  OK
+Jan 17 16:59:28 -05:00 morphux  Activating all swap files/partitions... OK
+Jan 17 16:59:30 -05:00 morphux  Mounting root file system in read-only mode...  OK
+Jan 17 16:59:31 -05:00 morphux  Checking file systems...Jan 17 16:59:34 -05:00 morphux  
+WARNING:
+
+File system errors were found and have been corrected.
+You may want to double-check that everything was fixed properly. WARN
+Jan 17 16:59:35 -05:00 morphux  Remounting root file system in read-write mode... OK
+Jan 17 16:59:36 -05:00 morphux  Mounting remaining file systems... OK
+Jan 17 16:59:38 -05:00 morphux  Cleaning file systems: /tmp OK
+Jan 17 16:59:41 -05:00 morphux  Retrying failed uevents, if any... OK
+Jan 17 16:59:47 -05:00 morphux  Starting system log daemon... OK
+Jan 17 16:59:49 -05:00 morphux  Starting kernel log daemon... OK
+Jan 17 16:59:56 -05:00 morphux  Bringing up the eth0 interface... 
+Jan 17 16:59:59 -05:00 morphux  Starting dhcpcd on the eth0 interface... OK
+--------

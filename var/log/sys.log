@@ -1,0 +1,406 @@
+Jan 17 16:59:48 morphux syslogd 1.5.1: restart.
+Jan 17 16:59:50 morphux kernel: klogd 1.5.1, log source = /proc/kmsg started.
+Jan 17 16:59:50 morphux kernel: Inspecting /boot/System.map-4.7.2
+Jan 17 16:59:53 morphux kernel: Cannot find map file.
+Jan 17 16:59:54 morphux kernel: Loaded 41541 symbols from 1 module.
+Jan 17 16:59:54 morphux kernel: [    0.000000] Linux version 4.7.2 (root@zeus) (gcc version 6.2.0 (GCC) ) #1 SMP Tue Jan 17 14:56:06 EST 2017
+Jan 17 16:59:54 morphux kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-current root=/dev/sda3 ro net.ifnames=0
+Jan 17 16:59:54 morphux kernel: [    0.000000] x86/fpu: Legacy x87 FPU detected.
+Jan 17 16:59:54 morphux kernel: [    0.000000] x86/fpu: Using 'eager' FPU context switches.
+Jan 17 16:59:54 morphux kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+Jan 17 16:59:54 morphux kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Jan 17 16:59:54 morphux kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Jan 17 16:59:54 morphux kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Jan 17 16:59:54 morphux kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007cfdffff] usable
+Jan 17 16:59:54 morphux kernel: [    0.000000] BIOS-e820: [mem 0x000000007cfe0000-0x000000007cffffff] reserved
+Jan 17 16:59:54 morphux kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Jan 17 16:59:54 morphux kernel: [    0.000000] NX (Execute Disable) protection: active
+Jan 17 16:59:54 morphux kernel: [    0.000000] SMBIOS 2.8 present.
+Jan 17 16:59:54 morphux kernel: [    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.7.5-20140531_083030-gandalf 04/01/2014
+Jan 17 16:59:54 morphux kernel: [    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Jan 17 16:59:54 morphux kernel: [    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+Jan 17 16:59:54 morphux kernel: [    0.000000] e820: last_pfn = 0x7cfe0 max_arch_pfn = 0x400000000
+Jan 17 16:59:54 morphux kernel: [    0.000000] MTRR default type: write-back
+Jan 17 16:59:54 morphux kernel: [    0.000000] MTRR fixed ranges enabled:
+Jan 17 16:59:54 morphux kernel: [    0.000000]   00000-9FFFF write-back
+Jan 17 16:59:54 morphux kernel: [    0.000000]   A0000-BFFFF uncachable
+Jan 17 16:59:54 morphux kernel: [    0.000000]   C0000-FFFFF write-protect
+Jan 17 16:59:54 morphux kernel: [    0.000000] MTRR variable ranges enabled:
+Jan 17 16:59:54 morphux kernel: [    0.000000]   0 base 0080000000 mask FF80000000 uncachable
+Jan 17 16:59:54 morphux kernel: [    0.000000]   1 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000]   2 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000]   3 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000]   4 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000]   5 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000]   6 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000]   7 disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
+Jan 17 16:59:54 morphux kernel: [    0.000000] found SMP MP-table at [mem 0x000f0ed0-0x000f0edf] mapped at [ffff8800000f0ed0]
+Jan 17 16:59:54 morphux kernel: [    0.000000] Scanning 1 areas for low memory corruption
+Jan 17 16:59:54 morphux kernel: [    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
+Jan 17 16:59:54 morphux kernel: [    0.000000] BRK [0x02137000, 0x02137fff] PGTABLE
+Jan 17 16:59:54 morphux kernel: [    0.000000] BRK [0x02138000, 0x02138fff] PGTABLE
+Jan 17 16:59:54 morphux kernel: [    0.000000] BRK [0x02139000, 0x02139fff] PGTABLE
+Jan 17 16:59:54 morphux kernel: [    0.000000] BRK [0x0213a000, 0x0213afff] PGTABLE
+Jan 17 16:59:54 morphux kernel: [    0.000000] BRK [0x0213b000, 0x0213bfff] PGTABLE
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: Early table checksum verification disabled
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: RSDP 0x00000000000F0CF0 000014 (v00 BOCHS )
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: RSDT 0x000000007CFE1854 000034 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: FACP 0x000000007CFE0B37 000074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: DSDT 0x000000007CFE0040 000AF7 (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: FACS 0x000000007CFE0000 000040
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: SSDT 0x000000007CFE0BAB 000BF9 (v01 BOCHS  BXPCSSDT 00000001 BXPC 00000001)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: APIC 0x000000007CFE17A4 000078 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: HPET 0x000000007CFE181C 000038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 17 16:59:54 morphux kernel: [    0.000000] No NUMA configuration found
+Jan 17 16:59:54 morphux kernel: [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000007cfdffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] NODE_DATA(0) allocated [mem 0x7cfdc000-0x7cfdffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] Zone ranges:
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA32    [mem 0x0000000001000000-0x000000007cfdffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000]   Normal   empty
+Jan 17 16:59:54 morphux kernel: [    0.000000] Movable zone start for each node
+Jan 17 16:59:54 morphux kernel: [    0.000000] Early memory node ranges
+Jan 17 16:59:54 morphux kernel: [    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Jan 17 16:59:54 morphux kernel: [    0.000000]   node   0: [mem 0x0000000000100000-0x000000007cfdffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000007cfdffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] On node 0 totalpages: 511870
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA zone: 64 pages used for memmap
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA zone: 21 pages reserved
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA32 zone: 7936 pages used for memmap
+Jan 17 16:59:54 morphux kernel: [    0.000000]   DMA32 zone: 507872 pages, LIFO batch:31
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: PM-Timer IO Port: 0x608
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+Jan 17 16:59:54 morphux kernel: [    0.000000] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: IRQ0 used by override.
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: IRQ5 used by override.
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: IRQ9 used by override.
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: IRQ10 used by override.
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: IRQ11 used by override.
+Jan 17 16:59:54 morphux kernel: [    0.000000] Using ACPI (MADT) for SMP configuration information
+Jan 17 16:59:54 morphux kernel: [    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+Jan 17 16:59:54 morphux kernel: [    0.000000] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+Jan 17 16:59:54 morphux kernel: [    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Jan 17 16:59:54 morphux kernel: [    0.000000] e820: [mem 0x7d000000-0xfffbffff] available for PCI devices
+Jan 17 16:59:54 morphux kernel: [    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Jan 17 16:59:54 morphux kernel: [    0.000000] setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:1 nr_node_ids:1
+Jan 17 16:59:54 morphux kernel: [    0.000000] percpu: Embedded 33 pages/cpu @ffff88007cc00000 s95320 r8192 d31656 u2097152
+Jan 17 16:59:54 morphux kernel: [    0.000000] pcpu-alloc: s95320 r8192 d31656 u2097152 alloc=1*2097152
+Jan 17 16:59:54 morphux kernel: [    0.000000] pcpu-alloc: [0] 0 
+Jan 17 16:59:54 morphux kernel: [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 503849
+Jan 17 16:59:54 morphux kernel: [    0.000000] Policy zone: DMA32
+Jan 17 16:59:54 morphux kernel: [    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-current root=/dev/sda3 ro net.ifnames=0
+Jan 17 16:59:54 morphux kernel: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 17 16:59:54 morphux kernel: [    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+Jan 17 16:59:54 morphux kernel: [    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+Jan 17 16:59:54 morphux kernel: [    0.000000] Memory: 1996724K/2047480K available (9088K kernel code, 1188K rwdata, 2776K rodata, 1124K init, 928K bss, 50756K reserved, 0K cma-reserved)
+Jan 17 16:59:54 morphux kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jan 17 16:59:54 morphux kernel: [    0.000000] Hierarchical RCU implementation.
+Jan 17 16:59:54 morphux kernel: [    0.000000] ^IBuild-time adjustment of leaf fanout to 64.
+Jan 17 16:59:54 morphux kernel: [    0.000000] ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=1.
+Jan 17 16:59:54 morphux kernel: [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=1
+Jan 17 16:59:54 morphux kernel: [    0.000000] NR_IRQS:4352 nr_irqs:256 16
+Jan 17 16:59:54 morphux kernel: [    0.000000] Console: colour VGA+ 80x25
+Jan 17 16:59:54 morphux kernel: [    0.000000] console [tty0] enabled
+Jan 17 16:59:54 morphux kernel: [    0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+Jan 17 16:59:54 morphux kernel: [    0.000000] hpet clockevent registered
+Jan 17 16:59:54 morphux kernel: [    0.000000] tsc: Unable to calibrate against PIT
+Jan 17 16:59:54 morphux kernel: [    0.000000] tsc: using HPET reference calibration
+Jan 17 16:59:54 morphux kernel: [    0.000000] tsc: Detected 2401.204 MHz processor
+Jan 17 16:59:54 morphux kernel: [    0.013000] Calibrating delay loop (skipped), value calculated using timer frequency.. 4802.40 BogoMIPS (lpj=2401204)
+Jan 17 16:59:54 morphux kernel: [    0.014101] pid_max: default: 32768 minimum: 301
+Jan 17 16:59:54 morphux kernel: [    0.015548] ACPI: Core revision 20160422
+Jan 17 16:59:54 morphux kernel: [    0.095202] ACPI: 2 ACPI AML tables successfully acquired and loaded
+Jan 17 16:59:54 morphux kernel: [    0.095407] 
+Jan 17 16:59:55 morphux kernel: [    0.097726] Security Framework initialized
+Jan 17 16:59:55 morphux kernel: [    0.098223] SELinux:  Initializing.
+Jan 17 16:59:55 morphux kernel: [    0.099082] SELinux:  Starting in permissive mode
+Jan 17 16:59:55 morphux kernel: [    0.106106] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Jan 17 16:59:55 morphux kernel: [    0.117702] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Jan 17 16:59:55 morphux kernel: [    0.122590] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 17 16:59:55 morphux kernel: [    0.122869] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 17 16:59:55 morphux kernel: [    0.160320] mce: CPU supports 10 MCE banks
+Jan 17 16:59:55 morphux kernel: [    0.163420] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+Jan 17 16:59:55 morphux kernel: [    0.163580] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+Jan 17 16:59:55 morphux kernel: [    0.679532] Freeing SMP alternatives memory: 36K (ffffffff82044000 - ffffffff8204d000)
+Jan 17 16:59:55 morphux kernel: [    0.709849] smpboot: Max logical packages: 1
+Jan 17 16:59:55 morphux kernel: [    0.710397] smpboot: APIC(0) Converting physical 0 to logical package 0
+Jan 17 16:59:55 morphux kernel: [    0.722000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Jan 17 16:59:55 morphux kernel: [    0.732000] APIC calibration not consistent with PM-Timer: 105ms instead of 100ms
+Jan 17 16:59:55 morphux kernel: [    0.732000] APIC delta adjusted to PM-Timer: 6249974 (6623118)
+Jan 17 16:59:55 morphux kernel: [    0.732000] smpboot: CPU0: AMD QEMU Virtual CPU version 2.1.2 (family: 0x6, model: 0x6, stepping: 0x3)
+Jan 17 16:59:55 morphux kernel: [    0.732583] Performance Events: Broken PMU hardware detected, using software events only.
+Jan 17 16:59:55 morphux kernel: [    0.734294] Failed to access perfctr msr (MSR c0010007 is 0)
+Jan 17 16:59:55 morphux kernel: [    0.758116] Huh? What family is it: 0x6?!
+Jan 17 16:59:55 morphux kernel: [    0.760225] x86: Booted up 1 node, 1 CPUs
+Jan 17 16:59:55 morphux kernel: [    0.760538] smpboot: Total of 1 processors activated (4802.40 BogoMIPS)
+Jan 17 16:59:55 morphux kernel: [    0.795147] devtmpfs: initialized
+Jan 17 16:59:55 morphux kernel: [    0.820614] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Jan 17 16:59:55 morphux kernel: [    0.828658] RTC time: 21:58:56, date: 01/17/17
+Jan 17 16:59:55 morphux kernel: [    0.845152] kworker/u2:0 (15) used greatest stack depth: 14816 bytes left
+Jan 17 16:59:55 morphux kernel: [    0.854458] NET: Registered protocol family 16
+Jan 17 16:59:55 morphux kernel: [    0.889212] cpuidle: using governor menu
+Jan 17 16:59:55 morphux kernel: [    0.893524] ACPI: bus type PCI registered
+Jan 17 16:59:55 morphux kernel: [    0.902608] PCI: Using configuration type 1 for base access
+Jan 17 16:59:55 morphux kernel: [    0.923787] kworker/u2:1 (37) used greatest stack depth: 13912 bytes left
+Jan 17 16:59:55 morphux kernel: [    1.516497] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Jan 17 16:59:55 morphux kernel: [    1.529374] ACPI: Added _OSI(Module Device)
+Jan 17 16:59:55 morphux kernel: [    1.529572] ACPI: Added _OSI(Processor Device)
+Jan 17 16:59:55 morphux kernel: [    1.529693] ACPI: Added _OSI(3.0 _SCP Extensions)
+Jan 17 16:59:55 morphux kernel: [    1.529815] ACPI: Added _OSI(Processor Aggregator Device)
+Jan 17 16:59:55 morphux kernel: [    1.593128] ACPI: Interpreter enabled
+Jan 17 16:59:55 morphux kernel: [    1.595583] ACPI: (supports S0 S3 S4 S5)
+Jan 17 16:59:55 morphux kernel: [    1.595799] ACPI: Using IOAPIC for interrupt routing
+Jan 17 16:59:55 morphux kernel: [    1.598116] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Jan 17 16:59:55 morphux kernel: [    1.867000] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Jan 17 16:59:55 morphux kernel: [    1.868722] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+Jan 17 16:59:55 morphux kernel: [    1.869682] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Jan 17 16:59:55 morphux kernel: [    1.871531] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Jan 17 16:59:55 morphux kernel: [    1.880939] PCI host bridge to bus 0000:00
+Jan 17 16:59:55 morphux kernel: [    1.881496] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Jan 17 16:59:55 morphux kernel: [    1.881662] pci_bus 0000:00: root bus resource [io  0x0d00-0xadff window]
+Jan 17 16:59:55 morphux kernel: [    1.881803] pci_bus 0000:00: root bus resource [io  0xae0f-0xaeff window]
+Jan 17 16:59:55 morphux kernel: [    1.882077] pci_bus 0000:00: root bus resource [io  0xaf20-0xafdf window]
+Jan 17 16:59:55 morphux kernel: [    1.882221] pci_bus 0000:00: root bus resource [io  0xafe4-0xffff window]
+Jan 17 16:59:55 morphux kernel: [    1.882406] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Jan 17 16:59:55 morphux kernel: [    1.882582] pci_bus 0000:00: root bus resource [mem 0x7d000000-0xfebfffff window]
+Jan 17 16:59:55 morphux kernel: [    1.883319] pci_bus 0000:00: root bus resource [bus 00-ff]
+Jan 17 16:59:55 morphux kernel: [    1.886253] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Jan 17 16:59:55 morphux kernel: [    1.898664] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Jan 17 16:59:55 morphux kernel: [    1.904703] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+Jan 17 16:59:55 morphux kernel: [    1.910398] pci 0000:00:01.1: reg 0x20: [io  0xc040-0xc04f]
+Jan 17 16:59:55 morphux kernel: [    1.912236] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Jan 17 16:59:55 morphux kernel: [    1.912457] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Jan 17 16:59:55 morphux kernel: [    1.913140] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Jan 17 16:59:55 morphux kernel: [    1.913321] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Jan 17 16:59:55 morphux kernel: [    1.920200] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+Jan 17 16:59:55 morphux kernel: [    1.921430] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+Jan 17 16:59:55 morphux kernel: [    1.921703] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+Jan 17 16:59:55 morphux kernel: [    1.928398] pci 0000:00:02.0: [1013:00b8] type 00 class 0x030000
+Jan 17 16:59:55 morphux kernel: [    1.930195] pci 0000:00:02.0: reg 0x10: [mem 0xfc000000-0xfdffffff pref]
+Jan 17 16:59:55 morphux kernel: [    1.932138] pci 0000:00:02.0: reg 0x14: [mem 0xfebf0000-0xfebf0fff]
+Jan 17 16:59:55 morphux kernel: [    1.941138] pci 0000:00:02.0: reg 0x30: [mem 0xfebe0000-0xfebeffff pref]
+Jan 17 16:59:55 morphux kernel: [    1.947661] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Jan 17 16:59:55 morphux kernel: [    1.949137] pci 0000:00:03.0: reg 0x10: [mem 0xfebc0000-0xfebdffff]
+Jan 17 16:59:55 morphux kernel: [    1.951137] pci 0000:00:03.0: reg 0x14: [io  0xc000-0xc03f]
+Jan 17 16:59:55 morphux kernel: [    1.959879] pci 0000:00:03.0: reg 0x30: [mem 0xfeb80000-0xfebbffff pref]
+Jan 17 16:59:55 morphux kernel: [    1.987128] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+Jan 17 16:59:55 morphux kernel: [    1.993124] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+Jan 17 16:59:55 morphux kernel: [    1.996456] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+Jan 17 16:59:55 morphux kernel: [    1.999449] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+Jan 17 16:59:55 morphux kernel: [    2.001200] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+Jan 17 16:59:55 morphux kernel: [    2.014957] ACPI: Enabled 16 GPEs in block 00 to 0F
+Jan 17 16:59:55 morphux kernel: [    2.033367] vgaarb: setting as boot device: PCI:0000:00:02.0
+Jan 17 16:59:55 morphux kernel: [    2.033753] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+Jan 17 16:59:55 morphux kernel: [    2.034103] vgaarb: loaded
+Jan 17 16:59:55 morphux kernel: [    2.034377] vgaarb: bridge control possible 0000:00:02.0
+Jan 17 16:59:55 morphux kernel: [    2.040691] SCSI subsystem initialized
+Jan 17 16:59:55 morphux kernel: [    2.048127] libata version 3.00 loaded.
+Jan 17 16:59:55 morphux kernel: [    2.057569] ACPI: bus type USB registered
+Jan 17 16:59:55 morphux kernel: [    2.062717] usbcore: registered new interface driver usbfs
+Jan 17 16:59:55 morphux kernel: [    2.066360] usbcore: registered new interface driver hub
+Jan 17 16:59:55 morphux kernel: [    2.068243] usbcore: registered new device driver usb
+Jan 17 16:59:55 morphux kernel: [    2.075409] pps_core: LinuxPPS API ver. 1 registered
+Jan 17 16:59:55 morphux kernel: [    2.075592] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Jan 17 16:59:55 morphux kernel: [    2.078387] PTP clock support registered
+Jan 17 16:59:55 morphux kernel: [    2.092405] Advanced Linux Sound Architecture Driver Initialized.
+Jan 17 16:59:55 morphux kernel: [    2.095462] PCI: Using ACPI for IRQ routing
+Jan 17 16:59:55 morphux kernel: [    2.096219] PCI: pci_cache_line_size set to 64 bytes
+Jan 17 16:59:55 morphux kernel: [    2.097474] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Jan 17 16:59:55 morphux kernel: [    2.097833] e820: reserve RAM buffer [mem 0x7cfe0000-0x7fffffff]
+Jan 17 16:59:55 morphux kernel: [    2.139718] NetLabel: Initializing
+Jan 17 16:59:55 morphux kernel: [    2.140145] NetLabel:  domain hash size = 128
+Jan 17 16:59:55 morphux kernel: [    2.140274] NetLabel:  protocols = UNLABELED CIPSOv4
+Jan 17 16:59:55 morphux kernel: [    2.142939] NetLabel:  unlabeled traffic allowed by default
+Jan 17 16:59:55 morphux kernel: [    2.150516] HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+Jan 17 16:59:55 morphux kernel: [    2.151662] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+Jan 17 16:59:55 morphux kernel: [    2.152471] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+Jan 17 16:59:55 morphux kernel: [    2.157803] amd_nb: Cannot enumerate AMD northbridges
+Jan 17 16:59:55 morphux kernel: [    2.158616] clocksource: Switched to clocksource hpet
+Jan 17 16:59:55 morphux kernel: [    2.632859] VFS: Disk quotas dquot_6.6.0
+Jan 17 16:59:55 morphux kernel: [    2.633806] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Jan 17 16:59:55 morphux kernel: [    2.642845] pnp: PnP ACPI init
+Jan 17 16:59:55 morphux kernel: [    2.653804] pnp 00:00: Plug and Play ACPI device, IDs PNP0b00 (active)
+Jan 17 16:59:55 morphux kernel: [    2.656816] pnp 00:01: Plug and Play ACPI device, IDs PNP0303 (active)
+Jan 17 16:59:55 morphux kernel: [    2.660807] pnp 00:02: Plug and Play ACPI device, IDs PNP0f13 (active)
+Jan 17 16:59:55 morphux kernel: [    2.663133] pnp 00:03: [dma 2]
+Jan 17 16:59:55 morphux kernel: [    2.665572] pnp 00:03: Plug and Play ACPI device, IDs PNP0700 (active)
+Jan 17 16:59:55 morphux kernel: [    2.670009] pnp 00:04: Plug and Play ACPI device, IDs PNP0400 (active)
+Jan 17 16:59:55 morphux kernel: [    2.673941] pnp 00:05: Plug and Play ACPI device, IDs PNP0501 (active)
+Jan 17 16:59:55 morphux kernel: [    2.685903] pnp: PnP ACPI: found 6 devices
+Jan 17 16:59:55 morphux kernel: [    2.942269] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Jan 17 16:59:55 morphux kernel: [    2.945454] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Jan 17 16:59:55 morphux kernel: [    2.945536] pci_bus 0000:00: resource 5 [io  0x0d00-0xadff window]
+Jan 17 16:59:55 morphux kernel: [    2.945586] pci_bus 0000:00: resource 6 [io  0xae0f-0xaeff window]
+Jan 17 16:59:55 morphux kernel: [    2.945636] pci_bus 0000:00: resource 7 [io  0xaf20-0xafdf window]
+Jan 17 16:59:55 morphux kernel: [    2.945686] pci_bus 0000:00: resource 8 [io  0xafe4-0xffff window]
+Jan 17 16:59:55 morphux kernel: [    2.945737] pci_bus 0000:00: resource 9 [mem 0x000a0000-0x000bffff window]
+Jan 17 16:59:55 morphux kernel: [    2.945788] pci_bus 0000:00: resource 10 [mem 0x7d000000-0xfebfffff window]
+Jan 17 16:59:55 morphux kernel: [    2.947896] NET: Registered protocol family 2
+Jan 17 16:59:55 morphux kernel: [    2.963977] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+Jan 17 16:59:55 morphux kernel: [    2.966256] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+Jan 17 16:59:55 morphux kernel: [    2.967408] TCP: Hash tables configured (established 16384 bind 16384)
+Jan 17 16:59:55 morphux kernel: [    2.968867] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 17 16:59:55 morphux kernel: [    2.969626] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 17 16:59:55 morphux kernel: [    2.974310] NET: Registered protocol family 1
+Jan 17 16:59:55 morphux kernel: [    2.980680] RPC: Registered named UNIX socket transport module.
+Jan 17 16:59:55 morphux kernel: [    2.980917] RPC: Registered udp transport module.
+Jan 17 16:59:55 morphux kernel: [    2.981303] RPC: Registered tcp transport module.
+Jan 17 16:59:55 morphux kernel: [    2.981446] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jan 17 16:59:55 morphux kernel: [    2.981786] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Jan 17 16:59:55 morphux kernel: [    2.982281] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+Jan 17 16:59:55 morphux kernel: [    2.983072] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Jan 17 16:59:55 morphux kernel: [    2.984423] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Jan 17 16:59:55 morphux kernel: [    2.984792] PCI: CLS 0 bytes, default 64
+Jan 17 16:59:55 morphux kernel: [    3.015009] Scanning for low memory corruption every 60 seconds
+Jan 17 16:59:55 morphux kernel: [    3.042665] futex hash table entries: 256 (order: 2, 16384 bytes)
+Jan 17 16:59:55 morphux kernel: [    3.046019] audit: initializing netlink subsys (disabled)
+Jan 17 16:59:55 morphux kernel: [    3.048838] audit: type=2000 audit(1484690338.047:1): initialized
+Jan 17 16:59:55 morphux kernel: [    3.070586] workingset: timestamp_bits=54 max_order=19 bucket_order=0
+Jan 17 16:59:55 morphux kernel: [    3.344700] NFS: Registering the id_resolver key type
+Jan 17 16:59:55 morphux kernel: [    3.348474] Key type id_resolver registered
+Jan 17 16:59:55 morphux kernel: [    3.348685] Key type id_legacy registered
+Jan 17 16:59:55 morphux kernel: [    3.359114] SELinux:  Registering netfilter hooks
+Jan 17 16:59:55 morphux kernel: [    3.411645] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Jan 17 16:59:55 morphux kernel: [    3.412383] io scheduler noop registered
+Jan 17 16:59:55 morphux kernel: [    3.412631] io scheduler deadline registered
+Jan 17 16:59:55 morphux kernel: [    3.417620] io scheduler cfq registered (default)
+Jan 17 16:59:55 morphux kernel: [    3.425447] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 17 16:59:55 morphux kernel: [    3.441825] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Jan 17 16:59:55 morphux kernel: [    3.444763] ACPI: Power Button [PWRF]
+Jan 17 16:59:55 morphux kernel: [    3.467900] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Jan 17 16:59:55 morphux kernel: [    3.499736] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+Jan 17 16:59:55 morphux kernel: [    3.537975] Non-volatile memory driver v1.3
+Jan 17 16:59:55 morphux kernel: [    3.541676] Linux agpgart interface v0.103
+Jan 17 16:59:55 morphux kernel: [    3.555991] [drm] Initialized drm 1.1.0 20060810
+Jan 17 16:59:55 morphux kernel: [    3.653978] loop: module loaded
+Jan 17 16:59:55 morphux kernel: [    3.669972] ata_piix 0000:00:01.1: version 2.13
+Jan 17 16:59:55 morphux kernel: [    3.713558] scsi host0: ata_piix
+Jan 17 16:59:55 morphux kernel: [    3.724442] scsi host1: ata_piix
+Jan 17 16:59:55 morphux kernel: [    3.728759] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc040 irq 14
+Jan 17 16:59:55 morphux kernel: [    3.729003] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc048 irq 15
+Jan 17 16:59:55 morphux kernel: [    3.748713] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+Jan 17 16:59:55 morphux kernel: [    3.748893] e100: Copyright(c) 1999-2006 Intel Corporation
+Jan 17 16:59:55 morphux kernel: [    3.751408] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+Jan 17 16:59:55 morphux kernel: [    3.751590] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Jan 17 16:59:55 morphux kernel: [    3.899001] ata2.01: NODEV after polling detection
+Jan 17 16:59:55 morphux kernel: [    3.903873] ata2.00: ATAPI: QEMU DVD-ROM, 2.1.2, max UDMA/100
+Jan 17 16:59:55 morphux kernel: [    3.912461] ata1.01: NODEV after polling detection
+Jan 17 16:59:55 morphux kernel: [    3.914501] ata1.00: ATA-7: QEMU HARDDISK, 2.1.2, max UDMA/100
+Jan 17 16:59:55 morphux kernel: [    3.914706] ata1.00: 20975232 sectors, multi 16: LBA48 
+Jan 17 16:59:55 morphux kernel: [    3.920417] ata2.00: configured for MWDMA2
+Jan 17 16:59:55 morphux kernel: [    3.923849] ata1.00: configured for MWDMA2
+Jan 17 16:59:55 morphux kernel: [    3.981447] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2    PQ: 0 ANSI: 5
+Jan 17 16:59:55 morphux kernel: [    4.004629] tsc: Refined TSC clocksource calibration: 2401.226 MHz
+Jan 17 16:59:55 morphux kernel: [    4.004884] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x229cbd668b4, max_idle_ns: 440795225116 ns
+Jan 17 16:59:55 morphux kernel: [    4.015823] sd 0:0:0:0: [sda] 20975232 512-byte logical blocks: (10.7 GB/10.0 GiB)
+Jan 17 16:59:55 morphux kernel: [    4.024699] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Jan 17 16:59:55 morphux kernel: [    4.044965] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.1. PQ: 0 ANSI: 5
+Jan 17 16:59:55 morphux kernel: [    4.050687] sd 0:0:0:0: [sda] Write Protect is off
+Jan 17 16:59:55 morphux kernel: [    4.050956] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Jan 17 16:59:55 morphux kernel: [    4.058500] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Jan 17 16:59:55 morphux kernel: [    4.083109] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+Jan 17 16:59:55 morphux kernel: [    4.083948] cdrom: Uniform CD-ROM driver Revision: 3.20
+Jan 17 16:59:55 morphux kernel: [    4.103606] sr 1:0:0:0: Attached scsi CD-ROM sr0
+Jan 17 16:59:55 morphux kernel: [    4.127612] sr 1:0:0:0: Attached scsi generic sg1 type 5
+Jan 17 16:59:55 morphux kernel: [    4.175753]  sda: sda1 sda2 sda3 sda4
+Jan 17 16:59:55 morphux kernel: [    4.239917] sd 0:0:0:0: [sda] Attached SCSI disk
+Jan 17 16:59:55 morphux kernel: [    5.009829] clocksource: Switched to clocksource tsc
+Jan 17 16:59:55 morphux kernel: [    5.129589] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
+Jan 17 16:59:55 morphux kernel: [    5.446155] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 52:54:00:12:34:56
+Jan 17 16:59:55 morphux kernel: [    5.447374] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Jan 17 16:59:55 morphux kernel: [    5.450742] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+Jan 17 16:59:55 morphux kernel: [    5.450914] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Jan 17 16:59:55 morphux kernel: [    5.452934] sky2: driver version 1.30
+Jan 17 16:59:55 morphux kernel: [    5.470024] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Jan 17 16:59:55 morphux kernel: [    5.470608] ehci-pci: EHCI PCI platform driver
+Jan 17 16:59:55 morphux kernel: [    5.471887] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Jan 17 16:59:55 morphux kernel: [    5.473394] ohci-pci: OHCI PCI platform driver
+Jan 17 16:59:55 morphux kernel: [    5.474443] uhci_hcd: USB Universal Host Controller Interface driver
+Jan 17 16:59:55 morphux kernel: [    5.480585] usbcore: registered new interface driver usblp
+Jan 17 16:59:55 morphux kernel: [    5.482898] usbcore: registered new interface driver usb-storage
+Jan 17 16:59:55 morphux kernel: [    5.488908] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+Jan 17 16:59:55 morphux kernel: [    5.501146] serio: i8042 KBD port at 0x60,0x64 irq 1
+Jan 17 16:59:55 morphux kernel: [    5.502415] serio: i8042 AUX port at 0x60,0x64 irq 12
+Jan 17 16:59:55 morphux kernel: [    5.513991] mousedev: PS/2 mouse device common for all mice
+Jan 17 16:59:55 morphux kernel: [    5.530741] rtc_cmos 00:00: RTC can wake from S4
+Jan 17 16:59:55 morphux kernel: [    5.538609] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+Jan 17 16:59:55 morphux kernel: [    5.551924] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+Jan 17 16:59:55 morphux kernel: [    5.557496] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram, hpet irqs
+Jan 17 16:59:55 morphux kernel: [    5.582664] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+Jan 17 16:59:55 morphux kernel: [    5.590904] hidraw: raw HID events driver (C) Jiri Kosina
+Jan 17 16:59:55 morphux kernel: [    5.633998] usbcore: registered new interface driver usbhid
+Jan 17 16:59:55 morphux kernel: [    5.634521] usbhid: USB HID core driver
+Jan 17 16:59:55 morphux kernel: [    5.685981] Netfilter messages via NETLINK v0.30.
+Jan 17 16:59:55 morphux kernel: [    5.690352] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+Jan 17 16:59:55 morphux kernel: [    5.694317] ctnetlink v0.93: registering with nfnetlink.
+Jan 17 16:59:55 morphux kernel: [    5.705752] ip_tables: (C) 2000-2006 Netfilter Core Team
+Jan 17 16:59:55 morphux kernel: [    5.710855] Initializing XFRM netlink socket
+Jan 17 16:59:55 morphux kernel: [    5.727914] NET: Registered protocol family 10
+Jan 17 16:59:55 morphux kernel: [    5.751301] ip6_tables: (C) 2000-2006 Netfilter Core Team
+Jan 17 16:59:55 morphux kernel: [    5.758039] sit: IPv6 over IPv4 tunneling driver
+Jan 17 16:59:55 morphux kernel: [    5.771749] NET: Registered protocol family 17
+Jan 17 16:59:55 morphux kernel: [    5.774874] Key type dns_resolver registered
+Jan 17 16:59:55 morphux kernel: [    5.785016] microcode: AMD CPU family 0x6 not supported
+Jan 17 16:59:55 morphux kernel: [    5.800904] registered taskstats version 1
+Jan 17 16:59:55 morphux kernel: [    5.814900]   Magic number: 1:916:1005
+Jan 17 16:59:55 morphux kernel: [    5.816624] console [netcon0] enabled
+Jan 17 16:59:55 morphux kernel: [    5.816827] netconsole: network logging started
+Jan 17 16:59:55 morphux kernel: [    5.823526] PM: Hibernation image not present or could not be loaded.
+Jan 17 16:59:55 morphux kernel: [    5.823681] ALSA device list:
+Jan 17 16:59:55 morphux kernel: [    5.823864]   No soundcards found.
+Jan 17 16:59:55 morphux kernel: [    6.402393] input: ImExPS/2 BYD TouchPad as /devices/platform/i8042/serio1/input/input3
+Jan 17 16:59:55 morphux kernel: [    6.411805] md: Waiting for all devices to be available before autodetect
+Jan 17 16:59:55 morphux kernel: [    6.411987] md: If you don't use raid, use raid=noautodetect
+Jan 17 16:59:55 morphux kernel: [    6.428811] md: Autodetecting RAID arrays.
+Jan 17 16:59:55 morphux kernel: [    6.429016] md: Scanned 0 and added 0 devices.
+Jan 17 16:59:55 morphux kernel: [    6.429381] md: autorun ...
+Jan 17 16:59:55 morphux kernel: [    6.429520] md: ... autorun DONE.
+Jan 17 16:59:55 morphux kernel: [    6.448415] EXT4-fs (sda3): couldn't mount as ext3 due to feature incompatibilities
+Jan 17 16:59:55 morphux kernel: [    6.457860] EXT4-fs (sda3): couldn't mount as ext2 due to feature incompatibilities
+Jan 17 16:59:55 morphux kernel: [    6.531550] EXT4-fs (sda3): mounted filesystem with ordered data mode. Opts: (null)
+Jan 17 16:59:55 morphux kernel: [    6.532771] VFS: Mounted root (ext4 filesystem) readonly on device 8:3.
+Jan 17 16:59:55 morphux kernel: [    6.573479] devtmpfs: mounted
+Jan 17 16:59:55 morphux kernel: [    6.666833] Freeing unused kernel memory: 1124K (ffffffff81f2b000 - ffffffff82044000)
+Jan 17 16:59:55 morphux kernel: [    6.667387] Write protecting the kernel read-only data: 14336k
+Jan 17 16:59:55 morphux kernel: [    6.674846] Freeing unused kernel memory: 1128K (ffff8800018e6000 - ffff880001a00000)
+Jan 17 16:59:55 morphux kernel: [    6.725433] Freeing unused kernel memory: 1320K (ffff880001cb6000 - ffff880001e00000)
+Jan 17 16:59:55 morphux kernel: [    7.261821] random: nonblocking pool is initialized
+Jan 17 16:59:55 morphux kernel: [    7.804555] stty (960) used greatest stack depth: 13744 bytes left
+Jan 17 16:59:55 morphux kernel: [    7.829011] rc (959) used greatest stack depth: 13256 bytes left
+Jan 17 16:59:55 morphux kernel: [    9.341961] mkdir (970) used greatest stack depth: 12808 bytes left
+Jan 17 16:59:55 morphux kernel: <30>[   15.906773] udevd[1052]: starting version 3.2
+Jan 17 16:59:55 morphux kernel: <30>[   16.281629] udevd[1053]: starting eudev-3.2
+Jan 17 16:59:55 morphux kernel: [   33.151340] Adding 204796k swap on /dev/sda4.  Priority:1 extents:1 across:204796k 
+Jan 17 16:59:55 morphux kernel: [   34.648396] EXT4-fs (sda3): re-mounted. Opts: (null)
+Jan 17 16:59:55 morphux kernel: [   39.780402] EXT4-fs (sda3): re-mounted. Opts: (null)
+Jan 17 16:59:55 morphux kernel: [   41.226969] EXT4-fs (sda2): mounting ext2 file system using the ext4 subsystem
+Jan 17 16:59:55 morphux kernel: [   41.300830] EXT4-fs (sda2): mounted filesystem without journal. Opts: (null)
+Jan 17 16:59:59 morphux dhcpcd[2059]: forked to background, child pid 2060
+Jan 17 17:00:01 morphux kernel: [   65.814536] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan 17 17:00:03 morphux kernel: [   67.818323] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Jan 17 17:00:03 morphux kernel: [   67.839143] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan 17 17:00:05 morphux dhcpcd[2060]: eth0: waiting for carrier
+Jan 17 17:00:05 morphux dhcpcd[2060]: eth0: carrier acquired
+Jan 17 17:00:05 morphux dhcpcd[2060]: eth0: adding address fe80::59c1:f175:aeb3:433
+Jan 17 17:00:06 morphux dhcpcd[2060]: DUID 00:01:00:01:20:11:50:66:52:54:00:12:34:56
+Jan 17 17:00:06 morphux dhcpcd[2060]: eth0: IAID 00:12:34:56
+Jan 17 17:00:06 morphux dhcpcd[2060]: eth0: soliciting an IPv6 router
+Jan 17 17:00:07 morphux dhcpcd[2060]: eth0: soliciting a DHCP lease
+Jan 17 17:00:07 morphux dhcpcd[2060]: eth0: offered 10.0.2.15 from 10.0.2.2
+Jan 17 17:00:07 morphux dhcpcd[2060]: eth0: probing address 10.0.2.15/24
+Jan 17 17:00:12 morphux dhcpcd[2060]: eth0: leased 10.0.2.15 for 86400 seconds
+Jan 17 17:00:12 morphux dhcpcd[2060]: eth0: adding route to 10.0.2.0/24
+Jan 17 17:00:12 morphux dhcpcd[2060]: eth0: adding default route via 10.0.2.2
+Jan 17 17:00:19 morphux dhcpcd[2060]: eth0: no IPv6 Routers available

@@ -1,0 +1,14 @@
+Jan 17 16:59:59 morphux dhcpcd[2059]: forked to background, child pid 2060
+Jan 17 17:00:05 morphux dhcpcd[2060]: eth0: waiting for carrier
+Jan 17 17:00:05 morphux dhcpcd[2060]: eth0: carrier acquired
+Jan 17 17:00:05 morphux dhcpcd[2060]: eth0: adding address fe80::59c1:f175:aeb3:433
+Jan 17 17:00:06 morphux dhcpcd[2060]: DUID 00:01:00:01:20:11:50:66:52:54:00:12:34:56
+Jan 17 17:00:06 morphux dhcpcd[2060]: eth0: IAID 00:12:34:56
+Jan 17 17:00:06 morphux dhcpcd[2060]: eth0: soliciting an IPv6 router
+Jan 17 17:00:07 morphux dhcpcd[2060]: eth0: soliciting a DHCP lease
+Jan 17 17:00:07 morphux dhcpcd[2060]: eth0: offered 10.0.2.15 from 10.0.2.2
+Jan 17 17:00:07 morphux dhcpcd[2060]: eth0: probing address 10.0.2.15/24
+Jan 17 17:00:12 morphux dhcpcd[2060]: eth0: leased 10.0.2.15 for 86400 seconds
+Jan 17 17:00:12 morphux dhcpcd[2060]: eth0: adding route to 10.0.2.0/24
+Jan 17 17:00:12 morphux dhcpcd[2060]: eth0: adding default route via 10.0.2.2
+Jan 17 17:00:19 morphux dhcpcd[2060]: eth0: no IPv6 Routers available
